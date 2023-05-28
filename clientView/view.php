@@ -14,14 +14,11 @@
     <button id="get-data-button">Hit Api</button>
 
     <script>
-        // Mendapatkan referensi elemen tombol dan header
         var button = document.getElementById("get-data-button");
         var input = document.getElementById("input-field");
         var header = document.getElementById("response-header");
 
-        // Menambahkan event listener saat tombol ditekan
         button.addEventListener("click", function() {
-            // Mengirim permintaan GET API menggunakan fetch()
 
             var xhr = new XMLHttpRequest();
             if (!(input.value === "")) {
@@ -29,7 +26,6 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = xhr.responseText;
-                        // Lakukan sesuatu dengan respons yang diterima
                         header.textContent = response;
                     }
                 };
@@ -38,7 +34,6 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = xhr.responseText;
-                        // Lakukan sesuatu dengan respons yang diterima
                         header.textContent = response;
                     }
                 };
