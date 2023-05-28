@@ -26,7 +26,8 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = xhr.responseText;
-                        header.textContent = response;
+                        var arr_resp = response.split("\"");
+                        header.textContent = arr_resp[1];
                     }
                 };
             } else {
@@ -34,7 +35,8 @@
                 xhr.onreadystatechange = function() {
                     if (xhr.readyState === 4 && xhr.status === 200) {
                         var response = xhr.responseText;
-                        header.textContent = response;
+                        var arr_resp = response.split("\"");
+                        header.textContent = arr_resp[1];
                     }
                 };
             }
