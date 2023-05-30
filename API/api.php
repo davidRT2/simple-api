@@ -10,7 +10,8 @@ switch ($request_method) {
             if (ctype_alpha($uri[0])) {
                 $response = "Hello " . $uri[0];
             } else {
-                echo json_encode(array("status" => 0, "status_message" => "Nama tidak boleh mengandung angka atau symbol"));
+                //echo json_encode(array("status" => 0, "status_message" => "Nama tidak boleh mengandung angka atau symbol"));
+                $response = "Nama tidak boleh mengandung angka atau symbol";
             }
         } else {
             $response = "Hello World";
